@@ -1,0 +1,13 @@
+service:
+  - mysql
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "pypy"
+  - "pypy3"
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS t1;'
+install:
+  - pip install -r requirements.txt
+script: py.test test_db.py
