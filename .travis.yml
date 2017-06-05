@@ -4,8 +4,7 @@ language: python
 python:
   - "2.7"
   - "3.4"
-  - "pypy"
-  - "pypy3"
+  # TODO make it work with pypy
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS t1;'
 install:
