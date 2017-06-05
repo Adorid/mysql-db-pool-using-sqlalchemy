@@ -23,7 +23,7 @@ def get_pool():
     global ENGINE    # pylint: disable=global-statement
     if not ENGINE:
         ENGINE = create_engine(
-            'mysql://',
+            'mysql+pymysql://',
             connect_args={
                 "host": DB_INFO["host"],
                 "user": DB_INFO["user"],
